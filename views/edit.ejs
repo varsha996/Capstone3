@@ -1,0 +1,20 @@
+ECHO is on.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit Post</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Edit Post</h1>
+    <form action="/update/<%= post.id %>" method="POST">
+      <input type="text" name="title" value="<%= post.title %>" required />
+      <textarea name="content" required><%= post.content %></textarea>
+      <button class="btn" type="submit">Update</button>
+    </form>
+    <a class="btn" href="/">Back</a>
+  </div>
+</body>
+</html>
